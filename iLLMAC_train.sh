@@ -1,6 +1,8 @@
+#!/bin/bash
+
 export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
 
-/opt/software/install/miniconda37/bin/python train.py \
+python train.py \
     --model_name_or_path llama/7b-32 \
     --data_path data/train_data_points-v2.1-64.json \
     --bf16 True \

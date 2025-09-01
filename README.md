@@ -15,23 +15,15 @@ This example was tested with the following environment. However, it should work 
 - Following instruction from [miniconda](https://docs.conda.io/en/latest/miniconda.html) to install Python.
 - Use the following command to install required packages.
 ```bash
-# Install with GPU support. Check https://pytorch.org for more information. 
-#+The following cmd install PyTorch compiled with cuda 118. 
-pip install torch --index-url https://download.pytorch.org/whl/cu118
-
-# If GPU not available, install the PyTorch compiled for CPU.
-pip install torch --index-url https://download.pytorch.org/whl/cpu
-
-# Install transformers, tokenizers and prettytable
-pip install transformers==4.28.1 tokenizers==0.13.3 prettytable
+pip install -r requirements.txt
 ```
 
 - The installation process will take about an hour. This heavily depends on your network bandwidth.
 
 ## Demo
-- Clone `iLLMAC` locally from Github
+- Download the LLM-model
 ```bash
-git clone https://github.com/deeplearningplus/iLLMAC.git
+huggingface-cli download --resume-download liu121/illmac --local-dir illmac --local-dir-use-symlinks False
 gzip -d ./data/*
 ```
 - Instructions to train iLLMAC:
