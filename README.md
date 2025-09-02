@@ -1,5 +1,10 @@
 # iLLMAC: instruction-tuned LLM for Assessment of Cancer
 
+![iLLMAC_overview](iLLMAC_overview.jpeg)
+A flowchart depicting the development and validation of iLLMAC. This f lowchart illustrates types of fragmentome data, development of iLLMAC via instruction-tuning demonstrations and evaluation of iLLMAC.
+
+---
+
 ## Introduction
 Inspired by the success of large language model in natural language understanding, we herein present a LLM-based model – instruction-tuned LLM for Assessment of Cancer (iLLMAC) – that can detect cancer using cfDNA end-motif profiles. We developed this model with cfDNA sequencing data curated from 2451 individuals. The sequencing modalities include whole genome sequencing, bisulfite sequencing and 5-hydroxymethylcytosine sequencing. We evaluated the performance of the model in the diagnosis of cancer and detection of HCC with internal- and external-testing sets. We demonstrated that iLLMAC is able to achieve high detection accuracy on different modalities of cfDNA data. Besides the development of iLLMAC, our study presents a new paradigm for cfDNA-based cancer diagnosis.   
 
@@ -42,6 +47,7 @@ bash iLLMAC_predict.sh
 
 ## How to run on your own data
 prepare the training data in the same format as `data/train_data_points-v2.1-64.json` and run `iLLMAC_train.sh`.
+
 
 
 
